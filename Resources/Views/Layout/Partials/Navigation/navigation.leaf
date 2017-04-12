@@ -1,6 +1,14 @@
 
 <ul>
     <li>
+        <a class="list-group-item #active(request, "/")" href="/">
+            <span class="icon">
+                <span class="fa fa-home"></span>
+            </span>
+            Blog
+        </a>
+    </li>
+    <li>
         <a class="list-group-item #active(request, "/admin/dashboard")" href="/admin/dashboard">
             <span class="icon">
                 <span class="fa fa-dashboard"></span>
@@ -8,6 +16,7 @@
             Dashboard
         </a>
     </li>
+    
     
     #allow(request, "super-admin") {
     <li class="list-group-heading">
