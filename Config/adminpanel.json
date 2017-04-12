@@ -16,5 +16,8 @@
               "slug": "admin",
               "is_default": true
               }
-              ]
+              ],
+    "customViews": [
+        "/Dashboard/new-page"
+    ]
 }
