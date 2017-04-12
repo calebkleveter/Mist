@@ -49,3 +49,7 @@ body {
     display: inline-block;
     float: left;
 }
+
+textarea {
+    height: 25em;
+}
