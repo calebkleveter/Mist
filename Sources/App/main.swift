@@ -1,5 +1,6 @@
 import Vapor
 import VaporPostgreSQL
+import AdminPanel
 
 let drop = Droplet()
 
