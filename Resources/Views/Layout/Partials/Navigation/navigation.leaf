@@ -32,6 +32,14 @@
             New Page
         </a>
     </li>
+    <li>
+        <a class="list-group-item #active(request, "/admin/settings")" href="/admin/settings">
+            <span class="icon">
+                <span class="fa fa-cog"></span>
+            </span>
+            Settings
+        </a>
+    </li>
     
     #allow(request, "super-admin") {
     <li class="list-group-heading">
