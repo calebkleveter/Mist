@@ -24,6 +24,14 @@
             New Post
         </a>
     </li>
+    <li>
+        <a class="list-group-item #active(request, "/admin/new-page")" href="/admin/new-page">
+            <span class="icon">
+                <span class="fa fa-file-text"></span>
+            </span>
+            New Page
+        </a>
+    </li>
     
     #allow(request, "super-admin") {
     <li class="list-group-heading">
