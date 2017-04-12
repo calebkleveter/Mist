@@ -16,7 +16,14 @@
             Dashboard
         </a>
     </li>
-    
+    <li>
+        <a class="list-group-item #active(request, "/admin/new-post")" href="/admin/new-post">
+            <span class="icon">
+                <span class="fa fa-pencil-square-o"></span>
+            </span>
+            New Post
+        </a>
+    </li>
     
     #allow(request, "super-admin") {
     <li class="list-group-heading">
