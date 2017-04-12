@@ -1,0 +1,7 @@
+{
+    "smtpHost": "smtp.mailgun.org",
+    "smtpPort": "465",
+    "user": "",
+    "password": "",
+    "fromEmail": ""
+}
