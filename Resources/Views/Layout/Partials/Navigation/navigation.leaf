@@ -17,7 +17,7 @@
         </a>
     </li>
     <li>
-        <a class="list-group-item #active(request, "/admin/new-post")" href="/admin/new-post">
+        <a class="list-group-item #active(request, "/admin/dashboard/new-post")" href="/admin/dashboard/new-post">
             <span class="icon">
                 <span class="fa fa-pencil-square-o"></span>
             </span>
@@ -25,7 +25,7 @@
         </a>
     </li>
     <li>
-        <a class="list-group-item #active(request, "/admin/new-page")" href="/admin/new-page">
+        <a class="list-group-item #active(request, "/admin/dashboard/new-page")" href="/admin/dashboard/new-page">
             <span class="icon">
                 <span class="fa fa-file-text"></span>
             </span>
@@ -33,7 +33,7 @@
         </a>
     </li>
     <li>
-        <a class="list-group-item #active(request, "/admin/settings")" href="/admin/settings">
+        <a class="list-group-item #active(request, "/admin/dashboard/settings")" href="/admin/dashboard/settings">
             <span class="icon">
                 <span class="fa fa-cog"></span>
             </span>
