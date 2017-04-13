@@ -18,6 +18,7 @@
               }
               ],
     "customViews": [
-        "/Dashboard/new-page"
+        "/Dashboard/new-page",
+        "/Dashboard/new-post"
     ]
 }
