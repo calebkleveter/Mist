@@ -1,0 +1,31 @@
+#extend("Layout/layout-page-sidebar")
+
+#export("page-header") {
+<div>
+    <h3>New post</h3>
+</div>
+}
+
+#export("content") {
+<form action="/admin/dashboard/new-post" method="POST">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="margin-vertical-sm">
+                <div class="form-group">
+                    <label class="control-label" for="post-name">Post Name:</label>
+                    <input class="form-control" type="text" name="post-name" id="post-name">
+                        </div>
+                <div class="form-group">
+                    <label class="control-label" for="post-content">Post Content:</label>
+                    <textarea class="form-control" name="post-content" id="post-content" style="height: 25em"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <input type="submit" class="btn btn-primary form-control" value="Create post">
+                </div>
+    </div>
+</form>
+}
