@@ -23,3 +23,9 @@ class MistDashboardController {
         return Response(redirect: "/admin/dashboard/cnew-page").flash(.success, "Page succesfully created!")
     }
 }
+
+extension MistDashboardController: AdminPanelController {
+    func addRoutes(to group: RouteGroup<Droplet.Value, (RouteGroup<Droplet.Value, Droplet>)>) {
+        group.post("new-page", handler: createNewPage)
+    }
+}
