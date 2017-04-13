@@ -5,7 +5,7 @@
       "package": "AdminPanel",
       "reason": null,
       "repositoryURL": "/Volumes/CalebsHD/Development/backEndWebDev/personal/vapor/packages/postgres-admin-panel/.git",
-      "version": "0.10.0"
+      "version": "0.10.1"
     },
     {
       "package": "CLibreSSL",
