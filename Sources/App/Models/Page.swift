@@ -3,4 +3,5 @@ import VaporPostgreSQL
 
 class BlogPage {
     
+    init() {}
 }
