@@ -2,6 +2,8 @@ import Vapor
 import VaporPostgreSQL
 import AdminPanel
 
+AdminPanel.customController = MistDashboardController()
+
 let drop = Droplet()
 
 try drop.addProvider(VaporPostgreSQL.Provider.self)
