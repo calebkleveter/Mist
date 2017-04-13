@@ -2,7 +2,7 @@
 
 #export("page-header") {
 <div>
-    <h3>New post</h3>
+    <h3>New Post</h3>
 </div>
 }
 
@@ -24,8 +24,8 @@
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <input type="submit" class="btn btn-primary form-control" value="Create post">
-                </div>
+            <input type="submit" class="btn btn-primary form-control" value="Create Post">
+        </div>
     </div>
 </form>
 }
