@@ -10,6 +10,7 @@ try drop.addProvider(VaporPostgreSQL.Provider.self)
 try drop.addProvider(AdminPanel.Provider.self)
 
 drop.preparations.append(BlogPage.self)
+drop.preparations.append(Post.self)
 
 drop.get { req in
     return try drop.view.make("welcome", [
