@@ -34,7 +34,7 @@ final class Post: Model {
 
 extension Post: Preparation {
     static func prepare(_ database: Database) throws {
-        try database.create("post", closure: { (post) in
+        try database.create("posts", closure: { (post) in
             post.id()
             post.string("content", length: 10000)
             post.string("name")
@@ -43,6 +43,6 @@ extension Post: Preparation {
     }
 
     static func revert(_ database: Database) throws {
-        try database.delete("post")
+        try database.delete("posts")
     }
 }
