@@ -1,1 +1,2 @@
 import Vapor
+import VaporPostgreSQL
