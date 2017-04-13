@@ -2,6 +2,9 @@ import Vapor
 import VaporPostgreSQL
 
 class BlogPage {
+    var title: String
     
-    init() {}
+    init(title: String) {
+        self.title = title
+    }
 }
