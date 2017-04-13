@@ -7,7 +7,7 @@
 }
 
 #export("content") {
-    <form action="new-page" method="POST">
+    <form action="/admin/dashboard/new-page" method="POST">
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="margin-vertical-sm">
