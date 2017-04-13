@@ -22,10 +22,28 @@ class MistDashboardController {
         
         return Response(redirect: "/admin/dashboard/new-page").flash(.success, "Page succesfully created!")
     }
+    
+    func createNewPost(_ request: Request)throws -> ResponseRepresentable {
+        guard let posteName = request.data["post-name"]?.string,
+            let postContent = request.data["post-content"]?.string else {
+                throw Abort.badRequest
+        }
+        
+        var newPost = Post(content: postContent, name: posteName)
+        
+        do {
+            try newPost.save()
+        } catch let error {
+            return Response(redirect: "/admin/dashboard/new-post").flash(.error, "An error occured while saving the blog post: \(error)")
+        }
+        
+        return Response(redirect: "/admin/dashboard/new-post").flash(.success, "Post succesfully created!")
+    }
 }
 
 extension MistDashboardController: AdminPanelController {
     func addRoutes(to group: RouteGroup<Droplet.Value, (RouteGroup<Droplet.Value, Droplet>)>) {
         group.post("new-page", handler: createNewPage)
+        group.post("new-post", handler: createNewPost)
     }
 }
