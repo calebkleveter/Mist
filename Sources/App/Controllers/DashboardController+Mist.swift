@@ -17,10 +17,10 @@ class MistDashboardController {
         do {
             try newPage.save()
         } catch let error {
-            return Response(redirect: "/admin/dashboard/cnew-page").flash(.error, "An error occured while saving the page: \(error)")
+            return Response(redirect: "/admin/dashboard/new-page").flash(.error, "An error occured while saving the page: \(error)")
         }
         
-        return Response(redirect: "/admin/dashboard/cnew-page").flash(.success, "Page succesfully created!")
+        return Response(redirect: "/admin/dashboard/new-page").flash(.success, "Page succesfully created!")
     }
 }
 
