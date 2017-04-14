@@ -16,6 +16,7 @@ final class Post: Model {
         self.slug = name.slugify()
         
         if self.content.characters.count > 500 { self.contentCard = self.content.substring(to: content.index(content.startIndex, offsetBy: 497)) + "..." } else { self.contentCard = self.content }
+        self.contentCard = self.contentCard.replacingOccurrences(of: "\n", with: "")
     }
 
     init(node: Node, in context: Context) throws {
