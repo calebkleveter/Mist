@@ -36,7 +36,7 @@ extension BlogPage: Model {
 
 extension BlogPage: Preparation {
     static func prepare(_ database: Database) throws {
-        try database.create("blogposts", closure: { (page) in
+        try database.create("blogpages", closure: { (page) in
             page.id()
             page.string("title")
             page.string("content", length: 10000)
@@ -45,6 +45,6 @@ extension BlogPage: Preparation {
     }
     
     static func revert(_ database: Database) throws {
-        try database.delete("blogposts")
+        try database.delete("blogpages")
     }
 }
