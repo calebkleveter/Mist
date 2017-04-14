@@ -7,5 +7,26 @@
 }
 
 #export("content") {
-
+    <div class="col-xs-12 col-md-6">
+        <h4 class="margin-top">Create New Admin</h4>
+        <form action="/admin/dashboard/new-admin" method="POST">
+            <div class="row">
+                <div class="margin-vertical-sm">
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email:</label>
+                        <input class="form-control" type="text" name="email" id="email">
+                            </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password">Password:</label>
+                        <input class="form-control" name="password" id="password">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input type="submit" class="btn btn-primary form-control" value="Create Admin">
+                </div>
+            </div>
+        </form>
+    </div>
 }
