@@ -19,6 +19,7 @@
               ],
     "customViews": [
         "/Dashboard/new-page",
-        "/Dashboard/new-post"
+        "/Dashboard/new-post",
+        "/Dashboard/settings"
     ]
 }
