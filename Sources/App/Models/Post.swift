@@ -23,7 +23,7 @@ final class Post: Model {
         id = try node.extract("id")
         content = try node.extract("content")
         name = try node.extract("name")
-        contentCard = try node.extract("contentCard")
+        contentCard = try node.extract("contentcard")
         slug = try node.extract("slug")
     }
 
@@ -32,7 +32,7 @@ final class Post: Model {
             "id": id,
             "content": content,
             "name": name,
-            "contentCard": contentCard,
+            "contentcard": contentCard,
             "slug": slug
         ])
     }
@@ -44,7 +44,7 @@ extension Post: Preparation {
             post.id()
             post.string("content", length: 10000)
             post.string("name")
-            post.string("contentCard", length: 500)
+            post.string("contentcard", length: 500)
             post.string("slug")
         })
     }
