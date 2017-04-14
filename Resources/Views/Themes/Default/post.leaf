@@ -8,6 +8,15 @@
 }
         
 #export("body") {
+    <header>
+        <nav>
+            <ul style="list-style: none;">
+                #loop(pages, "page") {
+                    <li><a href="#(page.slug)">#(page.name)</a></li>
+                }
+            </ul>
+        </nav>
+    </header>
     <h1>#(name)</h1>
     <p>#(content)</p>
 }

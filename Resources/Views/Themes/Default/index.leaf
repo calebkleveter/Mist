@@ -8,6 +8,15 @@
 }
 
 #export("body") {
+    <header>
+        <nav>
+            <ul style="list-style: none;">
+                #loop(pages, "page") {
+                    <li><a href="#(page.slug)">#(page.name)</a></li>
+                }
+            </ul>
+        </nav>
+    </header>
     #loop(posts, "post") {
         <p>#(post.contentcard)</p>
         <a href="/posts/#(post.slug)">Read More</a>
