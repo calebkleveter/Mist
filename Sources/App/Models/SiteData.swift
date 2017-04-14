@@ -6,6 +6,7 @@ class SiteData {
     var id: Node?
     var theme: String
     var name: String
+    var subscribers: Int?
     
     init(theme: String, name: String) {
         self.theme = theme
@@ -16,6 +17,7 @@ class SiteData {
         id = try node.extract("id")
         theme = try node.extract("theme")
         name = try node.extract("name")
+        subscribers = try node.extract("subscribers")
     }
 }
 
@@ -24,7 +26,8 @@ extension SiteData: Model {
         return try Node(node: [
                 "id": id,
                 "theme": theme,
-                "name": name
+                "name": name,
+                "subscribers": subscribers
             ])
     }
 }
@@ -35,6 +38,7 @@ extension SiteData: Preparation {
             site.id()
             site.string("theme")
             site.string("name")
+            site.int("subscribers", optional: true)
         })
     }
     
