@@ -12,10 +12,17 @@ try drop.addProvider(AdminPanel.Provider.self)
 drop.preparations.append(BlogPage.self)
 drop.preparations.append(Post.self)
 
+let postController = BlogPostController()
+
 drop.get { req in
-    return try drop.view.make("welcome", [
-    	"message": drop.localization[req.lang, "welcome", "title"]
-    ])
+    try postController.addRoutes(to: drop)
+    
+    return try drop.view.make("index",  [
+            "posts": try Post.all().makeNode()
+        ])
+//    return try drop.view.make("welcome", [
+//    	"message": drop.localization[req.lang, "welcome", "title"]
+//    ])
 }
 
 drop.resource("posts", PostController())
