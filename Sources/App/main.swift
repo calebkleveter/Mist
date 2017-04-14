@@ -17,7 +17,7 @@ let postController = BlogPostController()
 drop.get { req in
     try postController.addRoutes(to: drop)
     
-    return try drop.view.make("index",  [
+    return try drop.view.make("Themes/Default/index",  [
             "pages": try BlogPage.all().makeNode(),
             "posts": try Post.all().makeNode()
         ])
