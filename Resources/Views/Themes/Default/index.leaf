@@ -12,7 +12,7 @@
         <nav>
             <ul style="list-style: none;">
                 #loop(pages, "page") {
-                    <li><a href="#(page.slug)">#(page.name)</a></li>
+                    <li><a href="#(page.slug)">#(page.title)</a></li>
                 }
             </ul>
         </nav>
