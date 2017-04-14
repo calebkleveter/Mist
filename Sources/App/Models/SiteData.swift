@@ -5,14 +5,17 @@ import Fluent
 class SiteData {
     var id: Node?
     var theme: String
+    var name: String
     
-    init(theme: String) {
+    init(theme: String, name: String) {
         self.theme = theme
+        self.name = name
     }
     
     required init(node: Node, in context: Context) throws {
         id = try node.extract("id")
         theme = try node.extract("theme")
+        name = try node.extract("name")
     }
 }
 
@@ -20,7 +23,8 @@ extension SiteData: Model {
     func makeNode(context: Context) throws -> Node {
         return try Node(node: [
                 "id": id,
-                "theme": theme
+                "theme": theme,
+                "name": name
             ])
     }
 }
@@ -30,6 +34,7 @@ extension SiteData: Preparation {
         try database.create("sitedatas", closure: { (site) in
             site.id()
             site.string("theme")
+            site.string("name")
         })
     }
     
