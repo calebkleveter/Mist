@@ -7,5 +7,5 @@
 }
 
 #export("content") {
-
+    <canvas id="analytics-chart" width="400" height="400"></canvas>
 }

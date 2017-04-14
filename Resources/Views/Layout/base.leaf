@@ -38,7 +38,8 @@
         <script src="/js/project.js"></script>
         #import("page-js")
         <script src="//cdn.ckeditor.com/4.5.2/standard/ckeditor.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+        <script src="/js/dashboard-chart.js"></script>
     </body>
 </html>
 
