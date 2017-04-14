@@ -1,6 +1,7 @@
 import Vapor
 import Fluent
 import Foundation
+import Slugify
 
 final class Post: Model {
     var id: Node?
