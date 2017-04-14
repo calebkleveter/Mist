@@ -4,6 +4,8 @@ import Routing
 import HTTP
 import VaporPostgreSQL
 import Flash
+import BCrypt
+import Foundation
 
 class MistDashboardController {
     
@@ -39,11 +41,38 @@ class MistDashboardController {
         
         return Response(redirect: "/admin/dashboard/new-post").flash(.success, "Post succesfully created!")
     }
+    
+    
+    func createNewAdmin(_ request: Request)throws -> ResponseRepresentable {
+        guard let email = request.data["email"]?.string,
+            let password = request.data["password"]?.string,
+            let name = request.data["name"]?.string else {
+                throw Abort.badRequest
+        }
+        
+        var admin = try BackendUser(node: [
+            "name": name,
+            "email": email,
+            "password": BCrypt.digest(password: password),
+            "role": "admin",
+            "updated_at": Date().toDateTimeString(),
+            "created_at": Date().toDateTimeString()
+            ])
+        
+        do {
+            try admin.save()
+        } catch let error {
+            return Response(redirect: "/admin/dashboard/settings").flash(.error, "Admin creation failed with error: \(error)")
+        }
+        
+        return Response(redirect: "/admin/dashboard/settings").flash(.success, "Admin created!")
+    }
 }
 
 extension MistDashboardController: AdminPanelController {
     func addRoutes(to group: RouteGroup<Droplet.Value, (RouteGroup<Droplet.Value, Droplet>)>) {
         group.post("new-page", handler: createNewPage)
         group.post("new-post", handler: createNewPost)
+        group.post("new-admin", handler: createNewAdmin)
     }
 }
