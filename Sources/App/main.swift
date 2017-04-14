@@ -18,6 +18,7 @@ drop.get { req in
     try postController.addRoutes(to: drop)
     
     return try drop.view.make("index",  [
+            "pages": try BlogPage.all().makeNode(),
             "posts": try Post.all().makeNode()
         ])
 //    return try drop.view.make("welcome", [

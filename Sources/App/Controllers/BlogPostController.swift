@@ -9,6 +9,8 @@ class BlogPostController {
         for post in try Post.all() {
             posts.get(post.slug, handler: { (request) -> ResponseRepresentable in
                 return try drop.view.make("Themes/Default/post", [
+                        "title": post.name,
+                        "pages": try BlogPage.all().makeNode(),
                         "name": post.name,
                         "content": post.content
                     ])
