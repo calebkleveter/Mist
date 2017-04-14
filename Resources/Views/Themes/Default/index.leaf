@@ -9,7 +9,7 @@
 
 #export("body") {
     #loop(posts, "post") {
-        <p>#(post.contentCard)</p>
+        <p>#(post.contentcard)</p>
         <a href="/posts/#(post.slug)">Read More</a>
         <hr/>
     }
