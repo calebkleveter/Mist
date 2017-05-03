@@ -161,7 +161,7 @@
       "package": "SwiftMark",
       "reason": null,
       "repositoryURL": "https://github.com/calebkleveter/SwiftMark.git",
-      "version": "1.2.0"
+      "version": "1.2.1"
     },
     {
       "package": "TLS",
