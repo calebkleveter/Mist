@@ -18,5 +18,5 @@
         </nav>
     </header>
     <h1>#(name)</h1>
-    <p>#(content)</p>
+    <p>#raw(content)</p>
 }
