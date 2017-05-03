@@ -4,7 +4,7 @@
     {
       "package": "AdminPanel",
       "reason": null,
-      "repositoryURL": "/Volumes/CalebsHD/Development/backEndWebDev/personal/vapor/packages/postgres-admin-panel/.git",
+      "repositoryURL": "https://github.com/calebkleveter/postgres-admin-panel.git",
       "version": "0.10.1"
     },
     {
@@ -113,7 +113,7 @@
       "package": "Paginator",
       "reason": null,
       "repositoryURL": "https://github.com/nodes-vapor/paginator.git",
-      "version": "0.4.4"
+      "version": "0.4.5"
     },
     {
       "package": "PathIndexable",
@@ -161,7 +161,7 @@
       "package": "SwiftMark",
       "reason": null,
       "repositoryURL": "https://github.com/calebkleveter/SwiftMark.git",
-      "version": "1.1.0"
+      "version": "1.2.0"
     },
     {
       "package": "TLS",
