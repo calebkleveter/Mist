@@ -1,8 +1,11 @@
 import Vapor
 import VaporPostgreSQL
 import HTTP
+import SwiftMark
 
 class BlogPostController {
+    let renderer = MarkdownRenderer()
+    
     func addRoutes(to drop: Droplet)throws {
         let posts = drop.grouped("posts")
         
@@ -12,7 +15,7 @@ class BlogPostController {
                         "title": post.name,
                         "pages": try BlogPage.all().makeNode(),
                         "name": post.name,
-                        "content": post.content
+                        "content": try self.renderer.render(post.content)
                     ])
             })
         }
