@@ -1,15 +1,18 @@
-# Basic Template
+# Mist
 
-A basic vapor template for starting a new Vapor web application. If you're using vapor toolbox, you can use: `vapor new --template=basic`
+## Useful Information
 
-## 📖 Documentation
+#### Themes:
 
-Visit the Vapor web framework's [documentation](http://docs.vapor.codes) for instructions on how to use this package.
+- There is only one default theme and it has no CSS.
+- The theme used is hardcoded. I will add a feature in the future allowing you change this from the dashboard.
+- To create your own theme, add a directory titled the name of the theme under `Resources/Views/Themes/`. Then create `index.leaf`, `page.leaf`, and `post.leaf`. Link to any custom CSS or JS you add to the `Public` folder.
 
-## 💧 Community
+#### Database
 
-Join the welcoming community of fellow Vapor developers in [slack](http://vapor.team).
+- Mist uses PostgreSQL.
 
-## 🔧 Compatibility
+#### Admin Panel
 
-This package has been tested on macOS and Ubuntu.
+- The AdminPanel can be accessed by going to `$PORT/admin/login`
+- If you seed the data to the DB, the admin credentials are `admin@admin.com` and `admin`.
